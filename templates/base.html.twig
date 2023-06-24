@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Test technique | L'Amusée Paris
+			{% endblock %}
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		<link rel="stylesheet" type="text/css" href="{{ asset("assets/css/style.css") }}"/>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<link
+		href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="logo">
+					<a href="{{ path('homepage') }}">
+						<img src="{{asset("assets/img/logo.png")}} " alt="logo">
+					</a>
+				</div>
+				<input type="checkbox" id="menu-toggle"/>
+				<label for="menu-toggle" class="menu-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
+				<div class="menu">
+					<a href="#">La Mariée</a>
+					<a href="#">Robes en couleur</a>
+					<a href="#">La Maison</a>
+					<a href="#">Rendez-vous / Boutique</a>
+				</div>
+				<div class="icon">
+					<i class="fa fa-user-o" aria-hidden="true"></i>
+					<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+					<i class="fa fa-search"></i>
+				</div>
+			</nav>
+			
+			<section class="h-text">
+				<h1 data-aos="zoom-in-down" data-aos-delay="100">
+					Nos Clientes
+				</h1>
+			</section>
+		</header>
+		{% block body %}{% endblock %}
+		<footer>
+			<div class="f-contact" data-aos="zoom-in-up" data-aos-offset="200">
+				<div>
+					<div>
+						<h4>LA MARIÉE</h4>
+						<br/>
+						<p>Cérémonie</p>
+						<p>Civil</p>
+						<p>Accessoires</p>
+						<p>Seconde main</p>
+					</div>
+				</div>
+
+				<div>
+					<div>
+						<h4>ROBES EN COULEUR</h4>
+						<br/>
+						<p>Collection 2022</p>
+						<p>Seconde main couleur</p>
+						<p>Intemporels</p>
+					</div>
+				</div>
+
+				<div>
+					<div>
+						<h4>LA MAISON</h4>
+						<br/>
+						<p>Nous</p>
+						<p>Blog</p>
+						<p>FAQ</p>
+						<p>Contact</p>
+					</div>
+				</div>
+
+				<div>
+					<div>
+						<h4>RENDEZ-VOUS / BOUTIQUE</h4>
+						<br/>
+						<p>Prise de rendez-vous au showroom</p>
+						<p>Sur-mesure</p>
+						<p>Essayage virtuel</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		{% block  js %}
+			<!-- JS here -->
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+			<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			<script>
+				$(".portfolio-item").isotope({ // options
+itemSelector: ".item",
+layoutMode: "fitRows"
+});
+$(".portfolio-menu ul li").click(function () {
+$(".portfolio-menu ul li").removeClass("active");
+$(this).addClass("active");
+
+var selector = $(this).attr("data-filter");
+$(".portfolio-item").isotope({filter: selector});
+return false;
+});
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+menuToggle.addEventListener("click", () => {
+menu.classList.toggle("active");
+});
+			</script>
+			<script>
+				AOS.init();
+			</script>
+
+		{% endblock %}
+	</body>
+</html>

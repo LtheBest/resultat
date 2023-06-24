@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="site-section">
+		<div class="container">
+			<div class="row">
+				<a href="{{ path('app_news_new') }}">Create new</a>
+				{% for new in news %}
+					<div class="d-flex flex-wrap">
+						<div class="col-lg-4 mb-4">
+							<div class="entry2">
+								<a href="{{ path('app_news_show', {'id':new.id}) }}">
+									<img class="img-fluid rounded" src="{{ vich_uploader_asset(new, 'imageFile') }}">
+								</a>
+								<div class="excerpt">
+
+									<p>{{new.description|slice(0,150)}}...</p>
+									<p>
+										<a href="{{ path('app_news_show', {'id':new.id}) }}">Read More</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
