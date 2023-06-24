@@ -130,11 +130,11 @@ footer{
   }
 
   @media (min-width: 576px) {
-	.d-sm-none {
-	  display: none !important;
-	}
+  .d-sm-none {
+    display: none !important;
   }
-  
+}
+
   @media (max-width: 720px) {
 	.menu-toggle {
 	  display: block;
@@ -169,7 +169,7 @@ footer{
 	  top: 100%;
 	  left: 0;
 	  width: 100%;
-	  background: #fff;
+	  background: rgba(255, 255, 255, 0.5);
 	  padding: 15px;
 	  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 	}
