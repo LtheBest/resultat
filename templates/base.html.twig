@@ -28,7 +28,7 @@
 						<img src="{{asset("assets/img/logo.png")}} " alt="logo">
 					</a>
 				</div>
-				<input type="checkbox" id="menu-toggle"/>
+				<input type="checkbox" id="menu-toggle" class="d-sm-none" />
 				<label for="menu-toggle" class="menu-toggle">
 					<span></span>
 					<span></span>
@@ -118,14 +118,7 @@ var selector = $(this).attr("data-filter");
 $(".portfolio-item").isotope({filter: selector});
 return false;
 });
-
-const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
-
-menuToggle.addEventListener("click", () => {
-menu.classList.toggle("active");
-});
-			</script>
+		</script>
 			<script>
 				AOS.init();
 			</script>

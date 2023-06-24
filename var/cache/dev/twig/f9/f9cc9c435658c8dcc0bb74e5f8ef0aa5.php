@@ -57,42 +57,41 @@ class __TwigTemplate_932de275c80c068b778895c1c2d0868c extends Template
 
         // line 4
         echo "
-
 \t<div class=\"site-section\">
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
 \t\t\t\t<a href=\"";
-        // line 9
+        // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_news_new");
         echo "\">Create new</a>
 \t\t\t\t";
-        // line 10
+        // line 9
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["news"]) || array_key_exists("news", $context) ? $context["news"] : (function () { throw new RuntimeError('Variable "news" does not exist.', 10, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["news"]) || array_key_exists("news", $context) ? $context["news"] : (function () { throw new RuntimeError('Variable "news" does not exist.', 9, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["new"]) {
-            // line 11
+            // line 10
             echo "\t\t\t\t\t<div class=\"d-flex flex-wrap\">
 \t\t\t\t\t\t<div class=\"col-lg-4 mb-4\">
 \t\t\t\t\t\t\t<div class=\"entry2\">
 \t\t\t\t\t\t\t\t<a href=\"";
-            // line 14
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_news_show", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 14)]), "html", null, true);
+            // line 13
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_news_show", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 13)]), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t\t<img class=\"img-fluid rounded\" src=\"";
-            // line 15
+            // line 14
             echo twig_escape_filter($this->env, $this->env->getRuntime('Vich\UploaderBundle\Twig\Extension\UploaderExtensionRuntime')->asset($context["new"], "imageFile"), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t<div class=\"excerpt\">
 
 \t\t\t\t\t\t\t\t\t<p>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["new"], "description", [], "any", false, false, false, 19), 0, 150), "html", null, true);
+            // line 18
+            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["new"], "description", [], "any", false, false, false, 18), 0, 150), "html", null, true);
             echo "...</p>
 \t\t\t\t\t\t\t\t\t<p>
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 21
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_news_show", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 21)]), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_news_show", ["id" => twig_get_attribute($this->env, $this->source, $context["new"], "id", [], "any", false, false, false, 20)]), "html", null, true);
             echo "\">Read More</a>
 \t\t\t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t\t\t</div>
@@ -104,7 +103,7 @@ class __TwigTemplate_932de275c80c068b778895c1c2d0868c extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['new'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 28
+        // line 27
         echo "\t\t\t</div>
 \t\t</div>
 \t</div>
@@ -128,7 +127,7 @@ class __TwigTemplate_932de275c80c068b778895c1c2d0868c extends Template
 
     public function getDebugInfo()
     {
-        return array (  108 => 28,  95 => 21,  90 => 19,  83 => 15,  79 => 14,  74 => 11,  70 => 10,  66 => 9,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  107 => 27,  94 => 20,  89 => 18,  82 => 14,  78 => 13,  73 => 10,  69 => 9,  65 => 8,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -136,7 +135,6 @@ class __TwigTemplate_932de275c80c068b778895c1c2d0868c extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-
 
 \t<div class=\"site-section\">
 \t\t<div class=\"container\">

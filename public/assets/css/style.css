@@ -124,8 +124,15 @@ footer{
 /* footer end */
 
 /*  */
+
 .menu-toggle {
 	display: none;
+  }
+
+  @media (min-width: 576px) {
+	.d-sm-none {
+	  display: none !important;
+	}
   }
   
   @media (max-width: 720px) {
@@ -136,6 +143,7 @@ footer{
 	  position: relative;
 	  z-index: 1;
 	}
+
   
 	.menu-toggle span {
 	  background: #000;

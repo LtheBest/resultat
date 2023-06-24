@@ -85,7 +85,7 @@ class __TwigTemplate_68e81befcae50c12c7ad376c7ac03aba extends Template
         echo " \" alt=\"logo\">
 \t\t\t\t\t</a>
 \t\t\t\t</div>
-\t\t\t\t<input type=\"checkbox\" id=\"menu-toggle\"/>
+\t\t\t\t<input type=\"checkbox\" id=\"menu-toggle\" class=\"d-sm-none\" />
 \t\t\t\t<label for=\"menu-toggle\" class=\"menu-toggle\">
 \t\t\t\t\t<span></span>
 \t\t\t\t\t<span></span>
@@ -162,7 +162,7 @@ class __TwigTemplate_68e81befcae50c12c7ad376c7ac03aba extends Template
 \t\t";
         // line 102
         $this->displayBlock('js', $context, $blocks);
-        // line 134
+        // line 127
         echo "\t</body>
 </html>
 ";
@@ -257,14 +257,7 @@ var selector = \$(this).attr(\"data-filter\");
 \$(\".portfolio-item\").isotope({filter: selector});
 return false;
 });
-
-const menuToggle = document.querySelector(\".menu-toggle\");
-const menu = document.querySelector(\".menu\");
-
-menuToggle.addEventListener(\"click\", () => {
-menu.classList.toggle(\"active\");
-});
-\t\t\t</script>
+\t\t</script>
 \t\t\t<script>
 \t\t\t\tAOS.init();
 \t\t\t</script>
@@ -287,7 +280,7 @@ menu.classList.toggle(\"active\");
 
     public function getDebugInfo()
     {
-        return array (  242 => 103,  235 => 102,  223 => 56,  213 => 20,  206 => 19,  196 => 16,  189 => 15,  175 => 6,  166 => 134,  164 => 102,  117 => 57,  115 => 56,  84 => 28,  80 => 27,  73 => 22,  71 => 19,  68 => 18,  65 => 15,  58 => 10,  54 => 8,  52 => 6,  45 => 1,);
+        return array (  242 => 103,  235 => 102,  223 => 56,  213 => 20,  206 => 19,  196 => 16,  189 => 15,  175 => 6,  166 => 127,  164 => 102,  117 => 57,  115 => 56,  84 => 28,  80 => 27,  73 => 22,  71 => 19,  68 => 18,  65 => 15,  58 => 10,  54 => 8,  52 => 6,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -322,7 +315,7 @@ menu.classList.toggle(\"active\");
 \t\t\t\t\t\t<img src=\"{{asset(\"assets/img/logo.png\")}} \" alt=\"logo\">
 \t\t\t\t\t</a>
 \t\t\t\t</div>
-\t\t\t\t<input type=\"checkbox\" id=\"menu-toggle\"/>
+\t\t\t\t<input type=\"checkbox\" id=\"menu-toggle\" class=\"d-sm-none\" />
 \t\t\t\t<label for=\"menu-toggle\" class=\"menu-toggle\">
 \t\t\t\t\t<span></span>
 \t\t\t\t\t<span></span>
@@ -412,14 +405,7 @@ var selector = \$(this).attr(\"data-filter\");
 \$(\".portfolio-item\").isotope({filter: selector});
 return false;
 });
-
-const menuToggle = document.querySelector(\".menu-toggle\");
-const menu = document.querySelector(\".menu\");
-
-menuToggle.addEventListener(\"click\", () => {
-menu.classList.toggle(\"active\");
-});
-\t\t\t</script>
+\t\t</script>
 \t\t\t<script>
 \t\t\t\tAOS.init();
 \t\t\t</script>
